@@ -1,0 +1,74 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Map Explorer</title>
+</head>
+
+<body>
+
+    <h1>🌍 World Map Explorer</h1>
+
+    <p>
+        Click on a country or region on the map to learn more about it.
+    </p>
+
+    <!-- World Map Image -->
+    <img src="world-map.jpg"
+         alt="World Map"
+         usemap="#worldmap"
+         width="1000">
+
+    <!-- Image Map -->
+    <map name="worldmap">
+
+        <!-- CIRCLE: India -->
+        <area shape="circle"
+              coords="650,390,40"
+              href="https://en.wikipedia.org/wiki/India"
+              alt="India"
+              target="_blank">
+
+        <!-- RECTANGLE: United States -->
+        <area shape="rect"
+              coords="120,250,300,350"
+              href="https://en.wikipedia.org/wiki/United_States"
+              alt="United States of America"
+              target="_blank">
+
+        <!-- POLYGON: Brazil -->
+        <area shape="poly"
+              coords="380,430,430,400,480,420,500,480,470,540,410,530,380,480"
+              href="https://en.wikipedia.org/wiki/Brazil"
+              alt="Brazil"
+              target="_blank">
+
+        <!-- DEFAULT: Entire remaining map -->
+        <area shape="default"
+              href="https://en.wikipedia.org/wiki/World"
+              alt="World Map"
+              target="_blank">
+
+    </map>
+
+</body>
+</html>
+```
+
+### What each part does
+
+* **`<img>`** → Displays the world map.
+* **`usemap="#worldmap"`** → Connects the image to the image map.
+* **`<map>`** → Defines the clickable regions.
+* **`<area>`** → Creates each clickable region.
+
+### Shapes used
+
+| Shape     | Country/Region | Purpose                    |
+| --------- | -------------- | -------------------------- |
+| `circle`  | India          | Circular clickable area    |
+| `rect`    | USA            | Rectangular clickable area |
+| `poly`    | Brazil         | Irregular polygon area     |
+| `default` | Rest of map    | Covers the remaining area  |
+
+**Important:** The `coords` above are example coordinates. They depend on the exact `world-map.jpg` image and its displayed size. If your teacher has provided a specific world-map image, the coordinates should be adjusted to that image.
