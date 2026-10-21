@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+</head>
+
+<!-- Top row = header, bottom row = navigation + main content -->
+<frameset rows="110,*" frameborder="1" border="1">
+
+    <!-- Task 1: Header frame -->
+    <frame src="header.html" name="header" scrolling="no" noresize>
+
+    <!-- Task 2: Two columns: Navigation and Main Content -->
+    <frameset cols="200,*">
+
+        <!-- Task 5: Navigation frame with a name -->
+        <frame src="nav.html" name="navigation" noresize>
+
+        <!-- Content frame: links in nav.html load pages here -->
+        <frame src="home.html" name="content">
+
+    </frameset>
+
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+
+</frameset>
+</html>
