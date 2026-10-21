@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Course Registration</title>
+</head>
+<body>
+
+  <h1>Online Course Registration</h1>
+
+  <form action="register.php" method="post" target="_blank" enctype="multipart/form-data">
+
+    <!-- Hidden field -->
+    <input type="hidden" name="form_title" value="Online Course Registration">
+
+    <h3>Personal Information</h3>
+
+    <p>
+      <label for="name">Student Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </p>
+
+    <p>
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </p>
+
+    <p>
+      <label for="mobile">Mobile Number:</label><br>
+      <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+    </p>
+
+    <p>
+      <label for="age">Age:</label><br>
+      <input type="number" id="age" name="age" min="10" max="100" placeholder="Enter your age">
+    </p>
+
+    <p>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" placeholder="Enter a password" required>
+    </p>
+
+    <p>
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob">
+    </p>
+
+    <p>
+      Gender:<br>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label>
+    </p>
+
+    <h3>Course Preferences</h3>
+
+    <p>
+      Skills:<br>
+      <input type="checkbox" id="html" name="skills" value="HTML">
+      <label for="html">HTML</label>
+      <input type="checkbox" id="css" name="skills" value="CSS">
+      <label for="css">CSS</label>
+      <input type="checkbox" id="js" name="skills" value="JavaScript">
+      <label for="js">JavaScript</label>
+      <input type="checkbox" id="python" name="skills" value="Python">
+      <label for="python">Python</label>
+    </p>
+
+    <p>
+      <label for="course">Select Course:</label><br>
+      <select id="course" name="course" required>
+        <option value="">-- Select a course --</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Python Programming">Python Programming</option>
+        <option value="Data Analytics">Data Analytics</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="time">Preferred Class Time:</label><br>
+      <input type="time" id="time" name="class_time" value="10:00">
+    </p>
+
+    <h3>Additional Details</h3>
+
+    <p>
+      <label for="address">Address / Additional Information:</label><br>
+      <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address or any additional information"></textarea>
+    </p>
+
+    <p>
+      <label for="file">Upload Document / Photograph:</label><br>
+      <input type="file" id="file" name="document">
+    </p>
+
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+
+  </form>
+
+</body>
+</html>
